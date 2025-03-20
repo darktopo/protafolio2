@@ -13,24 +13,57 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 20px;
+    color: white;
 }
 .logo{
     display: flex;
     padding: 10px;
 }
-ul{
-    list-style: none;
+.menu {
     display: flex;
-    gap: 16px;
+    gap: 15px;
 }
-li{
-    height: fit-content;
-}
-a{
-    outline: none;
-    text-decoration: none;
+.menu a {
     color: white;
-    font-size: small;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: relative; 
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    .menu a {
+        padding: 10px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .milogo{
@@ -211,7 +244,6 @@ a{
     color: white;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -313,6 +345,56 @@ a{
 }
 
 /* fifth */
+.hero_5{
+    width: 100%;
+    height: 500px;
+    background-color: #0a0f22;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.parra{
+    position: relative;
+    width: 50%;
+    padding-inline: 50px;
+    padding-block: 20px;
+}
+.parra p{
+    font-size: 30px;
+    color: white;
+}
+
+.listImag{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+}
+.listImag img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.btn_pro{
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    height: 40px;
+    width: 300px;
+    background-color: yellow;
+    border-radius: 20px;
+    font-size: small;
+}
+.btn_pro a{
+    color: black;
+    font-size: small;
+    font-weight: 500;
+}
+
+/* sexth */
 .hero_4{
     width: 100%;
     height: 500px;
@@ -356,4 +438,63 @@ input{
     align-items: center;
     justify-content: center;
 
+}
+
+/* proyectos.html */
+.hero_1_1{
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    color: white;
+    background: rgb(10,15,34);
+    background: linear-gradient(180deg, rgba(10,15,34,1) 0%, rgba(9,9,121,1) 35%, rgba(42,78,147,1) 100%);
+    aspect-ratio: 16/9;
+    background-image: linear-gradient(180deg, rgb(0,4,20) 0%, rgb(42,66,114) 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.content_1{
+    height: screen;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px;
+}
+@media (min-width: 768px) {
+    .content_1{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin: 5px;
+    }
+}
+.cont_1_1{
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+    background-color: rgb(3, 5, 43);
+}
+.cont_1_1 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont_1_1 a img{
+    width: 150px;
+    display: flex;
+    margin-block: 10px;
+}
+.desc{
+    background-color: rgb(34, 33, 79);
+}
+.desc h2{
+    text-align: center;
 }

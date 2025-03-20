@@ -1,5 +1,7 @@
 const card = document.querySelector("#cont_cards")
 const extra = document.querySelector("#extra")
+const togglebtn = document.querySelector('#menu-toggle')
+const menu = document.querySelector('#menu')
 const skillCards = [
     {
         name: "Java",
@@ -70,3 +72,7 @@ function extraIcons(items, element) {
         element.innerHTML += template;
     }
 }
+
+togglebtn.addEventListener("click", () => {
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+})
